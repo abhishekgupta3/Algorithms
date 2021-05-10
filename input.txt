@@ -1,6 +1,4 @@
-3
-baba
-ba
-aa
-aaa
-ab ba
+4 3
+0 1
+0 2
+3 1
