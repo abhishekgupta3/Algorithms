@@ -1,3 +1,4 @@
+// GRAPHS: BFS / DFS
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -24,7 +25,6 @@ public:
 			cout << '\n';
 		}
 	}
-
 	void bfs(int src = 0) {
 		int dist[V]; //Single Source shortest path using BFS
 		memset(dist, -1, sizeof dist);
@@ -63,25 +63,6 @@ public:
 			if (!vis[i])_dfs(vis, i);
 		}
 	}
-	// undirected graph: cycle/or not
-	bool _hasCycle(bool vis[], int node, int parent) {
-		vis[node] = true;
-
-		for (auto nbrs : g[node]) {
-			if (!vis[nbrs]) {
-				bool cycle = _hasCycle(vis, nbrs, node);
-				if (cycle)return true;
-			}
-			else if (nbrs != parent)return true;
-		}
-		return false;
-	}
-
-	bool hasCycle() {
-		bool vis[V] = {0};
-		return _hasCycle(vis, 0, -1);
-	}
-
 };
 
 
@@ -102,12 +83,9 @@ int main() {
 		g.addEdge(x, y);
 	}
 
-	cout << g.hasCycle();
-
-
-
-
+	g.bfs(0);
+	cout << '\n';
+	cout << g.dfs();
 
 	return 0;
-
 }
