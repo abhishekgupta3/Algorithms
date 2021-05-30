@@ -1,5 +1,5 @@
-// Quick Sort -> Worst T.C: O(N ^ 2)
-// ---------------------------------------------------------
+// Kth Smallest: T.C: Worst: O(n^2) Average: O(N)
+// A.S: O(logN) due to recursive call stack
 #include <iostream>
 using namespace std;
 
@@ -21,33 +21,18 @@ int lomuto(int arr[], int l, int h) {
 	return j + 1;
 }
 
-// Hoare's Partition
-int Hoare(int arr[], int l, int h) {
-	int pivot = arr[l]; //first element
-	int i = l - 1, j = h + 1;
-
-	while (true) {
-		do {
-			i++;
-		} while (arr[i] < pivot);
-
-		do {
-			j--;
-		} while (arr[j] > pivot);
-
-		if (i >= j)return j;
-		swap(arr[i], arr[j]);
+int kthSmallest(int arr[], int l, int h, int k) {
+	if (l == h) {
+		if (k == 1)return arr[l];
+		else return -1;
 	}
+	int idx = lomuto(arr, l, h);
+	int pos = idx - l + 1;
+	if (pos == k)return arr[idx];
+	if (pos > k)return kthSmallest(arr, l, idx - 1, k);
+	else return kthSmallest(arr, idx + 1, h, k - pos);
 }
 
-void quickSort(int ar[], int l, int h) {
-	// base case
-	if (l >= h)return;
-	int idx = lomuto(ar, l, h);
-
-	quickSort(ar, l, idx - 1);
-	quickSort(ar, idx + 1, h);
-}
 
 int main() {
 #ifndef ONLINE_JUDGE
@@ -57,8 +42,8 @@ int main() {
 
 	int ar[] = {1, 3, 7, 16, 11, 15, 11, 9, 8, 0};
 	int n = sizeof(ar) / sizeof(ar[0]);
-	Hoare(ar, 0, n - 1) ;
-	// quickSort(ar, 0, n - 1);
+	int k = 5;
+	cout << kthSmallest(ar, 0, n - 1, k) << '\n';
 
 	for (int i = 0; i < n; ++i) {
 		cout << ar[i] << " ";
