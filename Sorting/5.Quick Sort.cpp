@@ -57,8 +57,7 @@ int main() {
 
 	int ar[] = {1, 3, 7, 16, 11, 15, 11, 9, 8, 0};
 	int n = sizeof(ar) / sizeof(ar[0]);
-	Hoare(ar, 0, n - 1) ;
-	// quickSort(ar, 0, n - 1);
+	quickSort(ar, 0, n - 1);
 
 	for (int i = 0; i < n; ++i) {
 		cout << ar[i] << " ";

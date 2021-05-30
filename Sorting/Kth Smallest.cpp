@@ -1,5 +1,6 @@
-// Kth Smallest: T.C: Worst: O(n^2) Average: O(N)
-// A.S: O(logN) due to recursive call stack
+// Quick Select: Kth Smallest
+// T.C: Worst: O(n^2) Average: O(N) A.S: O(logN) due to recursive call stack
+// *********************************************************************************
 #include <iostream>
 using namespace std;
 
