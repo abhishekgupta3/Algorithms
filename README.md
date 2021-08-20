@@ -1,6 +1,4 @@
 # C++ Programs
 
-.......
-bunch of coding files
-.......
+Competitive Programming Templates
 

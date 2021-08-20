@@ -25,10 +25,7 @@ void merge(int a[], int b[], int n, int m) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
+
 	int n, m; cin >> n >> m;
 	int a[n], b[m];
 	for (int i = 0; i < n; ++i)cin >> a[i];
