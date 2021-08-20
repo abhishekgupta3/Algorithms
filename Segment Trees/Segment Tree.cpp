@@ -1,3 +1,4 @@
+// Range Sum Query: Point Updates
 #include <iostream>
 using namespace std;
 
@@ -31,6 +32,7 @@ void update(int *arr, int *tree, int l, int h, int treeNode, int idx, int value)
 
 	tree[treeNode] = tree[2 * treeNode] + tree[2 * treeNode + 1];
 }
+
 // TC: O(logN)
 int range(int* tree, int l, int h, int treeNode, int left, int right) {
 	// completely outside the given range
@@ -45,10 +47,6 @@ int range(int* tree, int l, int h, int treeNode, int left, int right) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 	int n = sizeof(arr) / sizeof(arr[0]);
