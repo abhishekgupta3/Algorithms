@@ -24,10 +24,6 @@ void BubbleSort(int ar[], int n) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int ar[] = {11, 12, 13};
 	int n = sizeof(ar) / sizeof(ar[0]);

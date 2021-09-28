@@ -50,10 +50,6 @@ void quickSort(int ar[], int l, int h) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int ar[] = {1, 3, 7, 16, 11, 15, 11, 9, 8, 0};
 	int n = sizeof(ar) / sizeof(ar[0]);

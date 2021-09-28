@@ -36,10 +36,6 @@ int MergeSort(int ar[], int low, int high) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int ar[] = { 11, 9};
 	int n = sizeof(ar) / sizeof(ar[0]);

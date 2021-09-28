@@ -36,7 +36,6 @@ void HeapSort(int arr[], int n) {
 	buildHeap(arr, n);
 
 	int size = n;
-
 	while (size > 1) {
 
 		swap(arr[0], arr[size - 1]);
@@ -49,10 +48,6 @@ void HeapSort(int arr[], int n) {
 
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int arr[] = {5, 1, 2, 0, 8};
 	int n = sizeof(arr) / sizeof(arr[0]);

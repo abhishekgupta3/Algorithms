@@ -1,4 +1,4 @@
-// undirected graph: cycle/or not
+// directed graph: cycle/or not
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,36 +12,36 @@ public:
 	}
 	void addEdge(int x, int y) {
 		g[x].push_back(y);
-		g[y].push_back(x);
 	}
 
-	bool _hasCycle(bool vis[], int node, int parent) {
+	bool _hasCycle(bool vis[], bool recStack[], int node) {
 		vis[node] = true;
+		recStack[node] = true;
 
 		for (auto nbrs : g[node]) {
-			if (!vis[nbrs]) {
-				bool cycle = _hasCycle(vis, nbrs, node);
-				if (cycle)return true;
+			if (!vis[nbrs] and _hasCycle(vis, recStack, nbrs)) {
+				return true;
 			}
-			else if (nbrs != parent)return true;
+			// back edge
+			else if (recStack[nbrs])return true;
 		}
+		recStack[node] = false;
 		return false;
 	}
 
 	bool hasCycle() {
 		bool vis[V] = {0};
-		return _hasCycle(vis, 0, -1);
+		bool recStack[V] = {0};
+		for (int i = 0; i < V; ++i) {
+			if (!vis[i]) {
+				if (_hasCycle(vis, recStack, i))return true;
+			}
+		}
+		return false;
 	}
-
 };
 
-
 int main() {
-
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int n, m; // n vertices m edges
 	cin >> n >> m;
@@ -53,7 +53,7 @@ int main() {
 		g.addEdge(x, y);
 	}
 
-	cout << (g.hasCycle() ? "has Cycle" : "no cycle") << endl;
+	cout << (g.hasCycle() ? "has Cycle" : "no cycle");
 
 	return 0;
 }

@@ -1,5 +1,4 @@
 // KMP
-// =========================================
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -37,11 +36,6 @@ bool kmp(string txt, string pat, int n, int m) {
 }
 
 int main() {
-
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	string text, pattern;
 	cin >> text >> pattern;

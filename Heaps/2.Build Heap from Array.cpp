@@ -29,10 +29,6 @@ void buildHeap(int arr[], int n) {
 
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int arr[] = {5, 8, 2, 0, 1};
 	int n = sizeof(arr) / sizeof(arr[0]);

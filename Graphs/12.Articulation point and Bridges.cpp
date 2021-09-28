@@ -64,11 +64,7 @@ public:
 };
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
-
+	
 	int n, m, a, b; cin >> n >> m;
 	Graph g(n + 5);
 	while (m--) {

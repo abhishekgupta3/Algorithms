@@ -1,6 +1,7 @@
 // Floyd Warshall: All pair Shortest Path
 // T.C: O(n^3) A.S: O(n^2)
 // -----------------------------------------------------------------------
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -30,10 +31,6 @@ void FloydWarshall(vector<vector<int>> g) {
 
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	vector<vector<int>> g = {
 		{0, INT_MAX, -2, INT_MAX},

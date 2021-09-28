@@ -1,5 +1,6 @@
 // Counting Sort: T.C: O(N+k) A.S: O(N+k)
 // ----------------------------------------------------------------------
+
 #include <iostream>
 #include <algorithm>
 using namespace std;
@@ -29,10 +30,6 @@ void countingSort(int ar[], int n) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int ar[] = {1, 4, 4, 1, 0, 1 };
 	int n = sizeof(ar) / sizeof(ar[0]);

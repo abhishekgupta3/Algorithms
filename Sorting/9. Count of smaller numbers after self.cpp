@@ -1,6 +1,7 @@
 // Count of smaller numbers after self
 // I/P [5 2 6 1] O/P [2 1 1 0]
 // ***********************************************************************
+
 #include <bits/stdc++.h>
 #define pii pair<int,int>
 using namespace std;
@@ -54,10 +55,6 @@ void mergeSort(vector<pii>& arr, vector<int>&ans, int l, int h) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int n, a; cin >> n;
 	vector<pii> arr(n);

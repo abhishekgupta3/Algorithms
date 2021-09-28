@@ -62,10 +62,6 @@ public:
 
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	Heap pq;
 
@@ -77,14 +73,12 @@ int main() {
 	pq.insert(10);
 	pq.insert(1);
 
-
 	cout << pq.getTop() << " " << pq.getsize() << endl;;
 
 	while (!pq.isEmpty()) {
 		cout << pq.getTop() << " ";
 		pq.remove();
 	}
-
 
 	return 0;
 }

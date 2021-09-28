@@ -1,4 +1,4 @@
-// Wave Array
+// Wave Sort
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -17,10 +17,7 @@ void waveSort(int ar[], int n) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
+
 	int ar[] = {1, 3, 7, 16, 11, 15, 9, 8, 0};
 	int n = sizeof(ar) / sizeof(ar[0]);
 	waveSort(ar, n);

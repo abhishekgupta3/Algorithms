@@ -53,10 +53,6 @@ void NQueen(int n, int row) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	memset(board, 0, sizeof board);
 	NQueen(8, 0);

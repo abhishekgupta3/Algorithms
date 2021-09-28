@@ -29,14 +29,9 @@ int Celebrity(vector<vector<int>>& arr, int n) {
 	}
 
 	return temp;
-
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	vector<vector<int>> arr{{0, 1}, {1, 0}};
 	int n = arr.size();

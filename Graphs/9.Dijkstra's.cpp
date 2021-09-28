@@ -54,11 +54,6 @@ public:
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
-
 	int n, m; // n vertices m edges
 	cin >> n >> m;
 
@@ -69,7 +64,7 @@ int main() {
 		g.addEdge(x, y, w);
 	}
 
-	Dijkstra();
+	g.Dijkstra();
 
 	return 0;
 }

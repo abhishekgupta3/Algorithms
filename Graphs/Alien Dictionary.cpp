@@ -50,15 +50,11 @@ string AlienDictionary(string ar[], int n, int k) {
 }
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
+
 	string arr[] = {"baa", "abcd", "abca", "cab", "cad"};
 	int n = 5, k = 4;
 
 	cout << AlienDictionary(arr, n, k) << '\n';
-
 
 	return 0;
 }

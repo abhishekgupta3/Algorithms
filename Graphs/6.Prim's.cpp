@@ -50,11 +50,6 @@ public:
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output78.txt", "w", stdout);
-#endif
-
 	int n, m; // n vertices m edges
 	cin >> n >> m;
 
@@ -66,7 +61,6 @@ int main() {
 	}
 
 	cout << g.prims() << '\n';
-
 
 	return 0;
 }

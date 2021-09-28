@@ -1,5 +1,6 @@
 // Sqrt Decomposition
 // Range Sum Query (RSQ)
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -64,8 +65,6 @@ int main(){
 	// Query
 	int l, r; cin >> l >> r;
 	cout << query(arr, blocks, l - 1, r - 1, n, rn) << '\n';
-
-
 
 	return 0;
 }

@@ -37,11 +37,6 @@ void RatinaMaze(bool input[n][n], bool solution[n][n], int row, int col) {
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
-
 	bool input[n][n];
 
 	for (int i = 0; i < n; i++) {

@@ -3,6 +3,7 @@
 // 1 fresh oranges
 // 2 rotten oranges
 // --------------------------------------------------
+
 #include <bits/stdc++.h>
 using namespace std;
 #define pii pair<int,int>
@@ -54,10 +55,6 @@ int RotOrange(int** arr, int r, int c) {
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output999.txt", "w", stdout);
-#endif
 	int r, c; cin >> r >> c;
 	int ** arr = new int*[r];
 

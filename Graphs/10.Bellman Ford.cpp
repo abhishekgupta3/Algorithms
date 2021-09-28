@@ -1,6 +1,7 @@
 // BELLMAN FORD
 // T.C: O(V*E)
 // -----------------------------------------------------------------------
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -46,10 +47,6 @@ public:
 };
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int n, m; // n vertices m edges
 	cin >> n >> m;
@@ -62,7 +59,6 @@ int main() {
 	}
 
 	g.Bellmanford();
-
 
 	return 0;
 }

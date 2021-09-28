@@ -111,11 +111,6 @@ public:
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
-
 	Trie t;
 	t.insert("abc");
 	t.insert("abd");
@@ -136,8 +131,5 @@ int main() {
 	cout << "bad " << t.search("bad") << endl;
 	cout << "back " << t.search("back") << endl;
 
-
-
 	return 0;
-
 }

@@ -29,13 +29,7 @@ string longestPalindrome(string s, int n) {
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-#endif
-
     string s; cin >> s;
     int n = s.length();
     cout << "longest Palindrome is " << longestPalindrome(s, n);
-
 }

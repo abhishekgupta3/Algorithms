@@ -79,11 +79,6 @@ public:
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
-
 	Node * root = new Node(5);
 
 	cout << root->search(root, 10) << "\n";

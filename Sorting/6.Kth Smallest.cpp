@@ -1,6 +1,7 @@
 // Quick Select: Kth Smallest
 // T.C: Worst: O(n^2) Average: O(N) A.S: O(logN) due to recursive call stack
 // *********************************************************************************
+
 #include <iostream>
 using namespace std;
 
@@ -36,10 +37,6 @@ int kthSmallest(int arr[], int l, int h, int k) {
 
 
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
 
 	int ar[] = {1, 3, 7, 16, 11, 15, 11, 9, 8, 0};
 	int n = sizeof(ar) / sizeof(ar[0]);

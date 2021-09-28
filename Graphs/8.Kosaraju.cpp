@@ -2,6 +2,7 @@
 //--------------------------------
 //      KOSARAJU ALGORITHM
 // -------------------------------
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -50,11 +51,6 @@ void kosaraju(vector<int>g[], vector<int>reverse_g[], int V) {
 
 int main() {
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
-
 	int n, m; // n vertices m edges
 	cin >> n >> m;
 
@@ -68,7 +64,6 @@ int main() {
 	}
 
 	kosaraju(g, reverse_g, n);
-
 
 	return 0;
 }

@@ -1,4 +1,4 @@
-// bipartite
+// undirected graph: cycle/or not
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -15,20 +15,22 @@ public:
 		g[y].push_back(x);
 	}
 
-	bool _bipartite(int node, int parent, int vis[], int color) {
-		vis[node] = color;
+	bool _hasCycle(bool vis[], int node, int parent) {
+		vis[node] = true;
+
 		for (auto nbrs : g[node]) {
-			if (!vis[nbrs] and !_bipartite( nbrs, node, vis, 3 - color)) {
-				return false;
+			if (!vis[nbrs]) {
+				bool cycle = _hasCycle(vis, nbrs, node);
+				if (cycle)return true;
 			}
-			else if (nbrs != parent and color == vis[nbrs])return false;
+			else if (nbrs != parent)return true;
 		}
-		return true;
+		return false;
 	}
 
-	bool bipartite() {
-		int vis[V] = {0}; // 0 not visited,1 color 1 & 2 color 2
-		return _bipartite(0, -1, vis, 0);
+	bool hasCycle() {
+		bool vis[V] = {0};
+		return _hasCycle(vis, 0, -1);
 	}
 
 };
@@ -46,7 +48,7 @@ int main() {
 		g.addEdge(x, y);
 	}
 
-	cout << (g.bipartite() ? "bipartite" : "not bipartite");
+	cout << (g.hasCycle() ? "has Cycle" : "no cycle") << endl;
 
 	return 0;
 }
